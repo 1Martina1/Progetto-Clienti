@@ -1,0 +1,18 @@
+<div class="form-signin my-5 formRicerca">
+    <!--In frm crei un formGroup in cui prendi e salvi Cognome e/o Codice Fiscale che ti vengono inseriti dall'utente.
+    eserguiRicerca() ti rinvia al metodo che ti fa i vari controlli e ti restituisce la risposta-->
+    <form [formGroup]="frm" (ngSubmit)="eseguiRicerca()">
+        <h1 class="h3 mb-5 fw-normal">Ricerca cliente per:</h1>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="floatingCognome" formControlName="cognome">
+            <!--Col formControlName="cognome" 2 "codFiscale" colleghi i dati inseriti dall'utente al tuo form, e li salvi li dentro-->
+            <label for="floatingCognome">Cognome</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="floatingCodFiscale" formControlName="codFiscale">
+            <label for="floatingCodFiscale">Codice fiscale</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary bottoneHome" type="submit">Cerca</button>
+        <p class="mt-5 mb-3 text-muted">Made with Marty</p>
+    </form>
+</div>

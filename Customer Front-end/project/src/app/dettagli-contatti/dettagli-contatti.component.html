@@ -1,0 +1,28 @@
+<div class="modal" style="display:flex" [hidden]="!mostraContatti" tabindex="-1">
+    <div class="modal-dialog modalDettagliContatti">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{customer.name}} {{customer.surname}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="mostraContatti = false"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table tabellaCustomer">
+                    <thead class="testataSchedaCustomer">
+                        <th>Id</th>
+                        <th>Tipo</th>
+                        <th>Valore</th>
+                        <th>Certificato</th>
+                        <th>modifica</th>
+                    </thead>
+                    <tr *ngFor="let c of listaContact">
+                        <td>{{c.id}}</td>
+                        <td><input type="text" [(ngModel)]="c.type"></td>
+                        <td><input type="text" [(ngModel)]="c.val"></td>
+                        <td><input type="text" [(ngModel)]="c.certified"></td>
+                        <td><img src="../../assets/Floppyd.jpg" class="iconaFloppy" alt="immagine modifica" (click)="aggiornaContatto(c)"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

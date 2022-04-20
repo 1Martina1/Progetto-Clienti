@@ -1,0 +1,62 @@
+<div  style="margin-top:5%; width: 95wh;" class="row g-3 align-items-center">
+    <table class="table tabellaInserimento">
+        <thead class="testataInserimento">
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Indirizzo</th>
+            <th>Codice fiscale</th>
+            <th>Data di nascita</th>
+            <th>Contatti</th>
+            <th></th>
+        </thead>
+
+        <tr *ngFor="let c of customerDaAggiungere">
+            <td>
+                <input type="text" placeholder="Inserisci nome" class="form-control" [(ngModel)]="c.name">
+            </td>
+
+            <td>
+                <input type="text" placeholder="Inserisci cognome" class="form-control" [(ngModel)]="c.surname">
+            </td>
+
+            <td>
+                <input type="text" placeholder="Inserisci indirizzo" class="form-control" [(ngModel)]="c.address">
+            </td>
+
+            <td>
+                <input type="text" placeholder="Inserisci codice fiscale" class="form-control" [(ngModel)]="c.fiscalCode">
+            </td>
+
+            <td>
+                <input type="text" placeholder="Inserisci data di nascita" class="form-control" [(ngModel)]="c.birth_date">
+            </td>
+
+            <td>
+                <ul>
+                    <li *ngFor="let con of c.contacts">
+                        <div class="col-auto">
+                            <label>Tipo</label>
+                            <input type="text" placeholder="Inserisci tipo" class="form-control" [(ngModel)]="con.type">
+                        </div>
+
+                        <div class="col-auto">
+                            <label>Val</label>
+                            <input type="text" placeholder="Inserisci valore" class="form-control" [(ngModel)]="con.val">
+                        </div>
+
+                        <div class="col-auto">
+                            <label>Certificato</label>
+                            <input type="text" placeholder="Inserisci certificato" class="form-control" [(ngModel)]="con.certified">
+                        </div>
+                    </li>
+                </ul>
+                
+            </td>
+            <td><button class="btn btn-outline-primary" (click)="nuovoContact(c)">+</button></td>
+        </tr>
+    </table>
+</div>
+<div class="bottoni">
+<button class="btn btn-outline-primary" (click)="nuovoCustomer()">+</button>
+<button class="btn btn-outline-primary" (click)="inviaLista()">Inserisci</button>
+</div>

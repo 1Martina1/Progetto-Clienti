@@ -1,0 +1,10 @@
+.formRicerca{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.bottoneHome{
+    background-color: rgba(218, 135, 149, 0.293);
+    color: black;
+}

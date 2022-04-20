@@ -1,0 +1,37 @@
+.tabellaInserimento{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+    border-width: medium;
+}
+
+.testataInserimento{
+    background-color: rgba(255, 111, 238, 0.092);
+}
+
+td{
+    padding: 5px;
+    padding-left: 10px;
+}
+
+th{
+    font-weight: normal;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+button{
+    background-color: rgba(255, 111, 238, 0.092);
+    border-color: rgb(0, 0, 0);
+    color:black;
+}
+
+.bottoni{
+    display: flex;
+justify-content: center;
+align-items: center;
+}

@@ -1,0 +1,37 @@
+<!--Questa è la barra laterale-->
+<div style="display:flex">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 98vh;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4"><img style=" max-width: 60px; height: auto;" src="../../assets/icona.png"></span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" aria-current="page" (click)="attivaRicerca()">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Ricerca clienti
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white" (click)="attivaInserimento()">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    Inserimento clienti
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div style="display: block; width: 80%;">
+    <app-inserimento-customer [hidden]="!mostraInserimento"></app-inserimento-customer>
+    <app-form-ricerca   [hidden]="!mostraRicerca" (em)="gestisciRicerca($event)"></app-form-ricerca>
+    <app-scheda-customer  [hidden]="!mostraRisultati" [ListaCustomer]="listaC" (em)="gestisciDettagliContatti($event)"></app-scheda-customer>
+    <app-dettagli-contatti [mostraContatti]="mostraContatti" [customer]="customer" [listaContact]="listaContatti"></app-dettagli-contatti>
+    </div>
+</div>

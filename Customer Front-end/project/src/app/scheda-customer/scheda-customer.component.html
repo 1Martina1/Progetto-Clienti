@@ -1,0 +1,49 @@
+<table class="table tabellaCustomer">
+    <thead class="testataSchedaCustomer">
+    <th>
+        Id
+    </th>
+    <th>
+        Nome
+    </th>
+    <th>
+        Cognome
+    </th>
+    <th>
+        Indirizzo
+    </th>
+    <th>
+        Codice fiscale
+    </th>
+    <th>
+        Compleanno
+    </th>
+    <th>
+        Contatti
+    </th>
+    </thead>
+    <tr *ngFor = "let c of ListaCustomer">
+        <td>
+            {{c.id}}
+        </td>
+        <td>
+            {{c.name}}
+        </td>
+        <td>
+            {{c.surname}}
+        </td>
+        <td>
+            {{c.address}}
+        </td>
+        <td>
+            {{c.fiscalCode}}
+        </td>
+        <td>
+            {{c.birth_date}}
+        </td>
+        <td>
+          <img src="../../assets/rubrica.png" class="IconaRubrica" alt="immagine rubrica"  (click)="stampaCustomer(c)">
+        </td>
+    </tr>
+    
+</table>
